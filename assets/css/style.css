@@ -1,0 +1,192 @@
+#pushdown {
+	position: relative;
+	top: 10000px;
+	height: 19px;
+}
+
+/* POSITIONING */
+.section {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	/*border: 1px solid blue;*/
+}
+
+.text {
+	font-family: BentonSans-Light, BentonSans;
+	color: rgb(77, 76, 76);
+	line-height: 1.3em;
+	text-align: justify;
+    text-justify: inter-word;
+    position-anchor: 0% 0%;
+    display: flex;
+}
+
+#sticky-nav {
+	position: fixed;
+	font-family: BentonSans-Light, BentonSans;
+	color: white;
+	padding: 2vh;
+	width: 100%;
+	background: linear-gradient(to right, #9fd6c8, #2899d5);
+	top: -50px;
+	z-index: 100;
+}
+
+
+#landing-nav {
+	font-family: BentonSans-Light, BentonSans;
+	color: rgba(77, 76, 76, .7);
+	text-align: center;
+	position: relative;
+	left: 50%;
+	top: 18vh;
+	transform: translateX(-50%);
+	opacity: 0;
+}
+
+.nav-link {
+	margin: 3px;
+}
+
+.nav-link:hover {
+	color: #2899d5;
+	transition: 0.2s all;
+}
+
+.container {
+	width: 40vw;
+	/*border: 1px solid red;*/
+}
+
+#about .container {
+	position: relative;
+	left: 10vw;
+	top: 40vh;
+}
+
+#awards .container {
+	position: relative;
+	left: 50vw;
+}
+
+/* SVG RESIZING */
+svg#landing_page {
+	left: 50%;
+	height: 50vh;
+	position: relative;
+	top: 50vh;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+#about .svg-wrapper, #about .text {
+	/*display: none;*/
+	position: absolute;
+	width: 100%;
+}
+
+#about .text {
+	top: 0;
+}
+
+#about .svg-wrapper {
+	bottom: 0;
+}
+
+/* SETTING UP ANIMATIONS */
+#landing_page .cls-1 {
+	stroke-dasharray: 0;
+	animation-name: draw-stroke;
+	animation-duration: 2.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+}
+
+
+#INSIDE_CIRCLE, #landing-nav {
+	opacity: 0;
+	animation-name: fade-in;
+	animation-duration: 1.5s;
+	animation-delay: 1.2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+}
+
+#landing-nav {
+	animation-duration: .8s;
+}
+
+#about .cls-60{
+	stroke-miterlimit: 10;
+	stroke-dasharray: 1000;
+}
+
+/* KEYFRAME ANIMATIONS */
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;
+	}
+}
+
+@keyframes draw-stroke {
+	from {
+		stroke-dasharray: 0;
+	} to {
+		stroke-dasharray: 1000;
+	}
+}
+
+/* SVG AUTO GENERATED STYLING */
+#landing_page .cls-1 {
+	fill:none;
+	stroke-miterlimit:10;
+	
+}
+
+#landing_page .cls-2 {
+	fill:url(#linear-gradient-2);
+}
+
+#landing_page .cls-3 {
+	font-size:24.48px;
+	font-family:BentonSansComp-Light, BentonSansComp;
+}
+
+#landing_page .cls-3, #landing_page .cls-7 {
+	fill:#4d4c4c;
+}
+
+#landing_page .cls-4 {
+	letter-spacing:-0.01em;
+}
+
+#landing_page .cls-5 {
+	letter-spacing:-0.02em;
+}
+
+#landing_page .cls-6 {
+	letter-spacing:0em;
+}
+
+#landing_page .cls-7 {
+	font-size:28.19px;
+	font-family:BentonSans-Medium, BentonSans;
+}
+
+#landing_page .cls-8{
+	letter-spacing:-0.03em;
+}
+
+#about .cls-1{font-size:80.27px;font-family:TiemposHeadline-Black, Tiempos Headline;}#about .cls-1,#about .cls-5{fill:#4d4c4c;}#about .cls-2{letter-spacing:-0.02em;}#about .cls-3{letter-spacing:0.01em;}#about .cls-4{letter-spacing:0em;}#about .cls-5{font-size:26.52px;font-family:BentonSans-Light, BentonSans;letter-spacing:0.1em;}#about .cls-6{letter-spacing:0.1em;}#about .cls-7{letter-spacing:0.1em;}#about .cls-8{letter-spacing:0.07em;}#about .cls-9{letter-spacing:0.01em;}#about .cls-10{letter-spacing:0em;}#about .cls-11{fill:none;stroke-miterlimit:10;}
+/* THE USUAL */
+body, html {
+	margin: 0;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
